@@ -9,3 +9,4 @@ function updatePrice() {
         $("#price").text("$" + data);
     });
 }
+

@@ -1,4 +1,3 @@
-let blockData = [];
 updateData();
 
 setInterval(function(){
@@ -6,6 +5,7 @@ setInterval(function(){
 }, 10000);
 
 function updateData() {
+    let blockData = [];
     $.getJSON('https://blockchain.info/latestblock?&cors=true', function (data) {
         $.each(data, function(index, element) {
             blockData.push(element);

@@ -2,6 +2,10 @@ body {
   background-color: powderblue;
 }
 
+.bg {
+    background-color: black;
+}
+
 .text {
     display: inline-block;
     padding-right: 20px;
@@ -9,12 +13,12 @@ body {
 }
 
 p {
-	padding: 0;
+    font-size: 22px;
 }
 
 * {
     font-size: 16px;
-    padding-top:0px;
+    padding-top:0;
 }
 
 .right_text {
@@ -28,7 +32,6 @@ p {
 	padding-top: 2%;
 	padding-bottom: 5px;
 	padding-left: 70%;
-
 }
 
 .menuBar {
@@ -44,30 +47,40 @@ a {
 
 
 tr, th, td {
-	border: 4px solid black;
+	border-right: 4px solid black;
+	border-bottom: 4px solid black;
+	border-top: 4px solid black;
 	background-color: orange;
 }
 
-.tablePlace {
-	width: 50%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 10%;
-	margin-bottom: 10%;
-	padding-left: 5%;
-	z-index: 3;
+.footer {
+    border-top: 4px solid black;
+    border-left: 4px solid black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #DCE5E3;
+    color: black;
+    text-align: center;
+    z-index: 200;
+    font-size: 30px;
 }
 
-
-footer {
-	background-color: #DCE5E3;
-	position: absolute;
-	bottom: 0;
-  	width: 100%;
-  	padding-top: 20px;
-  	padding-bottom: 20px;
-  	border-top: 4px solid black;
-  	border-left: 4px solid black;
+.header {
+    visibility: hidden;
+    display: none;
+    border-top: 4px solid black;
+    border-left: 4px solid black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #DCE5E3;
+    color: black;
+    text-align: center;
+    z-index: 200;
+    font-size: 30px;
 }
 
 #test {
@@ -98,10 +111,7 @@ body {
 }
 
 body{
-}
-
-#spacer {
-	padding-top: 10%;
+    padding-bottom: 75%;
 }
 
 body {
@@ -109,56 +119,80 @@ body {
 }
 
 #btc {
-	max-width:50%;
-	max-height:50%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: auto;
-    margin-bottom: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
 }
 
 .sidenav {
-  height: 100%;
-  width: 15%;
-  position: fixed;
-  z-index: 3;
-  top: 0;
-  left: 0;
-  background-color: teal;
-  overflow-x: hidden;
-  padding-top: 60px;
-  border: 4px solid black;
-  margin-right: 50%;
+    border: 4px solid black;
+    display: inline-block;
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 11%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: teal; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
 }
 
-.sidenav p {
-  padding: 3px 4px 3px 8px;
-  text-decoration: none;
-  font-size: 25px;
-  color: black;
-  display: block;
-  text-align: center
-  
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: teal;
+    display: block;
 }
 
+/* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-  color: #f1f1f1;
+    color: #f1f1f1;
 }
 
-.sidenav hr {
-  border: 2px solid black;
+table {
+    background-color: red;
+    float: left;
+    margin-left: 11%;
+    margin-top: 7%;
+    white-space: nowrap;
 }
 
-.main {
-  margin-left: 160px; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
+@media screen and (max-width: 600px) {
+    .sidenav {
+        visibility: hidden;
+        display: none;
+    }
 
-	
+    .table {
+        margin-left: 0;
+        margin-top: 55%;
+    }
+
+    a {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .footer {
+        border-left: 0;
+    }
+
+    .nav-item {
+        visibility: hidden;
+        display: none;
+    }
+
+    .collapse navbar-collapse {
+        visibility: hidden;
+        display: none;
+    }
+
+    .sticky {
+        border-left: 0;
+    }
+}

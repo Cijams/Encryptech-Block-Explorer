@@ -15,6 +15,7 @@
 </head>
 
 <body>
+<div class=bg">
 
 <div class="sticky">
     <nav id="test" class="navbar navbar-expand-lg navbar-light bg-light">
@@ -38,60 +39,38 @@
                     <a class="nav-link" href="#">Tools</a>
                 </li>
             </ul>
+
             <form id="blockSearch" class="form-inline my-2 my-lg-0">
                 <input id="heights" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button id="somebutton" onclick="getBlockData(2)" class="btn btn-outline-success my-1 my-sm-0" type="button">Search</button>
-
-
+                <button id="somebutton" onclick="getBlockData()" class="btn btn-outline-success my-1 my-sm-0" type="button">Search</button>
 
                 <!--
                 TODO: Above is the onclick() method, it might need to be somehwere else
                 you need to add the listener.java so that enter button works, and
                 you need to pull the actual number from the search bar. right now its
                 hard coded to [2].
-
-                
                 -->
-
-
-
-
-
-
-
-
-
 
             </form>
         </div>
     </nav>
 </div>
-<!-- Place holder for Blockchain data to be inserted. -->
-<div class="tablePlace">
-    <div class="container">
-        <table class="table">
-            <tbody>
-            </tbody>
-        </table>
-    </div>
-    <div id="demo"></div>
-    <div id="spacer"></div>
-</div>
 
-<div class="container">
-    <div class="sidenav">
-        <p>Current Price</p>
-        <p id="price">$</p>
-        <hr>
-        <p>Newest Block</p>
-        <p id="latest">Genesis</p>
-        <hr>
-        <p>Time Mined</p>
-        <p id="time">0</p>
-        <hr>
-        <img id="btc" src="http://encryptech.net/btc.png">
+    <div class="container">
+        <div class="sidenav">
+            <p></p><br>
+            <p>Current Price</p>
+            <p id="price">$</p>
+            <hr>
+            <p>Newest Block</p>
+            <p id="latest">Genesis</p>
+            <hr>
+            <p>Time Mined</p>
+            <p id="time">0</p>
+            <hr>
+            <img id="btc" src="http://encryptech.net/btc.png">
+        </div>
     </div>
-</div>
 
 <!-- Refreshes the most recently mined Bitcoin block. -->
 <script src="javascript/latest-block.js"></script>
@@ -99,9 +78,19 @@
 <!-- Refreshes the current price of Bitcoin ever 10 seconds. -->
 <script src="javascript/current-price.js"></script>
 
-<script src="javascript/explore-block.js">
+<!-- Retrieves the Bitcoin block specified by user. -->
+<script src="javascript/explore-block.js"></script>
 
-</script>
+<script src="javascript/listeners.js"></script>
+
+    <table class="table">
+        <tbody>
+        </tbody>
+    </table>
+</div>
+<div class="footer">
+    <a href="https://encryptech.net/">Encryptech</a>
+</div>
 
 </body>
 </html>

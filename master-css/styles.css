@@ -57,12 +57,15 @@ p {
 
 .top-container {
     background-color: powderblue;
-    margin-top: 10%;
+    margin-top: 5%;
     text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#bg {
-    background-color: powderblue; /* turn me to powerderblue */
+#topColor {
+    background-color: powderblue;
 }
 
 #left-cloud {
@@ -87,4 +90,41 @@ h1 {
     color: orange;
     font-size: 100px !important;
     height: 100px;
+}
+
+.cpu1 {
+    float: left;
+    height: 150px;
+    width: 150px;
+}
+
+.cpu2 {
+    float: right;
+    height: 150px;
+    width: 150px;
+}
+
+.sect {
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+}
+
+.langs {
+    text-align: left;
+    margin-left: auto;
+    width: 500px;
+    height: 200px;
+}
+
+.langs2 {
+    text-align: left;
+    margin-right: auto;
+    width: 500px;
+    height: 200px;
+}
+
+#middleColor {
+    background-color: white;
 }

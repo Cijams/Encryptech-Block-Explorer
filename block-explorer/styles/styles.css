@@ -37,14 +37,7 @@ p {
 .menuBar {
 	background-color: #DCE5E3;
 	padding-left: 60%;
-	
 }
-
-a {
-	padding-right: 20px !important;
-	padding-left: 20px !important;
-}
-
 
 tr, th, td {
 	border-right: 4px solid black;
@@ -83,12 +76,8 @@ tr, th, td {
     font-size: 30px;
 }
 
-#test {
+#barColor {
 	background-color: #DCE5E3 !important;
-}
-
-body {
-	
 }
 
 .btn-outline-success {
@@ -105,17 +94,17 @@ body {
   z-index: 10;
 }
 
+.sticky a {
+    padding-right: 20px !important;
+}
+
 .page-footer {
 	padding-top: 0px;
 	padding-bottom: 0px;
 }
 
 body{
-    padding-bottom: 75%;
-}
-
-body {
-  font-family: "Lato", sans-serif;
+    padding-bottom: 65%;
 }
 
 #btc {

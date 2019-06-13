@@ -1,5 +1,8 @@
+/**
+ * Gets the newest block of the Bitcoin blockchain
+ * and updates every 10 seconds.
+ */
 updateData();
-
 setInterval(function(){
     updateData();
 }, 10000);

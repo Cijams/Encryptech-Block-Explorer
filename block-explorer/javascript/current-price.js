@@ -1,5 +1,8 @@
+/**
+ * Gets the newest price of Bitcoin and updates
+ * every 10 seconds.
+ */
 updatePrice();
-
 setInterval(function(){
     updatePrice();
 }, 10000);

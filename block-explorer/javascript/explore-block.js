@@ -1,29 +1,11 @@
+/**
+ * Retrieve the data of a block in the Bitcoin network by height.
+ */
 function getBlockData() {
     $(".table tbody").empty();
     let blockHeight = document.getElementById("blockSearch").elements[0].value;
     $.getJSON(`https://api.blockcypher.com/v1/btc/main/blocks/${blockHeight}`, function (data) {
-
         let blockData = JSON.stringify(data);
-
-        parser = blockData.split(",");
-        parser = cleanParser(parser);
-
-
-        parser.forEach(function (element) {
-            let table = element.split(":");
-            let field = table[0].replace(/[&\/\\#,+()$~%.'":*?<>{}[\]]/g, '');
-            let data = table[1].replace(/[&\/\\#,+()$~%.'":*?<>{}[\]]/g, '');
-            let markup = "<tr><td>" + field + "</td><td>" + data;
-            $("table tbody").append(markup);
-        });
-
-
-
-
-        // `https://api.blockcypher.com/v1/btc/main/blocks/${blockHeight}?txstart=1&limit=1`
-        /*
-        let blockData = JSON.stringify(data);
-        blockData = blockData.substr(12, blockData.length);
         let parser = blockData.split(",");
         parser = cleanParser(parser);
 
@@ -34,11 +16,15 @@ function getBlockData() {
             let markup = "<tr><td>" + field + "</td><td>" + data;
             $("table tbody").append(markup);
         });
-        */
     });
-
 }
 
+/**
+ * Cleans up the data set, picks the right points and
+ * removes all of the JSON formatting.
+ * @param parser
+ * @returns {Array}
+ */
 function cleanParser(parser) {
     let data = [0, 1, 3, 4, 5, 6, 7, 10,
     11,12, 13 , 14, 15, 16, 17];

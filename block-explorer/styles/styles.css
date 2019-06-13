@@ -128,7 +128,6 @@ body{
     padding-top: 20px;
 }
 
-/* The navigation menu links */
 .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
@@ -137,7 +136,6 @@ body{
     display: block;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
     color: #f1f1f1;
 }
@@ -150,7 +148,6 @@ table {
     margin-bottom: 15% !important;
     white-space: nowrap;
 }
-
 
 @media screen and (max-width: 600px) {
     .sidenav {

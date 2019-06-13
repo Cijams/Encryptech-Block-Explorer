@@ -27,9 +27,9 @@ function getBlockData() {
  */
 function cleanParser(parser) {
     let data = [0, 1, 3, 4, 5, 6, 7, 10,
-    11,12, 13 , 14, 15, 16, 17];
+        11, 12, 13, 14, 15, 16, 17];
     let blockData = [];
-    for(let i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
         blockData.push(parser[data[i]]);
     }
     return blockData;

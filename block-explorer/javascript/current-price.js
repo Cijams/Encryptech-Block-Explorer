@@ -3,7 +3,7 @@
  * every 10 seconds.
  */
 updatePrice();
-setInterval(function(){
+setInterval(function () {
     updatePrice();
 }, 10000);
 
